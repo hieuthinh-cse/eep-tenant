@@ -1,0 +1,39 @@
+topics:
+  apigw.fraud.prod:
+    metadata:
+      keySchema: "apigw.frau.prod-key"
+      valueSchemas:
+        - "apigw.fraud.prod-value"
+      title: "Fraud Topic"
+    partitions: 3
+    replicationFactor: 2
+    config: {}
+    acl:
+      entries:
+        - principal: User:abc
+          host: "*"
+          operation: WRITE
+          permissionType: ALLOW
+subjects:
+  apigw.fraud.prod-key:
+    compatibility: FORWARD_TRANSITIVE
+    schema: >
+      {
+        "namespace": "com.avro.apigw.fraud",
+        "type": "record",
+        "name": "FraudKey",
+        "fields": [
+          {"name": "id", "type": "string"}
+        ]
+      }
+  apigw.fraud.prod-value:
+    compatibility: FORWARD_TRANSITIVE
+    schema: >
+      {
+        "namespace": "com.avro.apigw.fraud",
+        "type": "record",
+        "name": "FraudEvent",
+        "fields": [
+          {"name": "id", "type": "string"}
+        ]
+      }

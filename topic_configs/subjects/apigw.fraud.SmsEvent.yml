@@ -1,0 +1,12 @@
+subjects:
+  com.apigw.fraud.SmsEvent:
+    compatibility: FORWARD_TRANSITIVE
+    schema: >
+      {
+        "namespace": "com.avro.apigw.fraud",
+        "type": "record",
+        "name": "SmsEvent",
+        "fields": [
+          {"name": "id", "type": "string"}
+        ]
+      }

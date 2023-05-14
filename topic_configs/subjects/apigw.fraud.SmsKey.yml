@@ -1,0 +1,13 @@
+
+subjects:
+  apigw.fraud.SmsKey:
+    compatibility: FORWARD_TRANSITIVE
+    schema: >
+      {
+        "namespace": "com.avro.apigw.fraud",
+        "type": "record",
+        "name": "SmsKey",
+        "fields": [
+          {"name": "id", "type": "string"}
+        ]
+      }
