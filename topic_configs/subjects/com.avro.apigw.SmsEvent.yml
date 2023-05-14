@@ -3,7 +3,7 @@ subjects:
     compatibility: FORWARD_TRANSITIVE
     schema: >
       {
-        "namespace": "com.avro.apigw.fraud",
+        "namespace": "com.avro.apigw",
         "type": "record",
         "name": "SmsEvent",
         "fields": [
